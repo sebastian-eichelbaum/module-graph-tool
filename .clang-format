@@ -1,0 +1,136 @@
+---
+
+###############################################################################
+#
+# Doc: http://clang.llvm.org/docs/ClangFormatStyleOptions.html
+#
+# To find the Style defaults:
+#  clang-format -style=Microsoft -dump-config > styledefaults
+#
+###############################################################################
+
+###############################################################################
+#
+# Base settings
+#
+BasedOnStyle: Microsoft
+
+# Use formatting for C++ and Standard-specific constructs
+Language:        Cpp
+Standard:        Latest
+
+# Tabs and Indent
+UseTab:          Never
+TabWidth:        4
+IndentWidth:     4
+
+# Line length
+ColumnLimit:     120
+
+###############################################################################
+#
+# Alignment
+#
+
+###############################################################################
+#
+# Break- rules
+#
+
+# Customized Break rules
+BraceWrapping:
+  AfterCaseLabel:  true
+  AfterUnion:      true
+  BeforeLambdaBody: true
+
+# Always break after template< ... >
+AlwaysBreakTemplateDeclarations: true
+
+###############################################################################
+#
+# Indenting
+#
+
+# Case in Switch-Statements.
+IndentCaseLabels: true
+
+# Do not indent requires
+# IndentRequiresClause: true
+
+# Indent by IndentWidth + AccessModifierOffset
+AccessModifierOffset: -4
+
+# Indent namespaces.
+NamespaceIndentation: All
+
+# Indent preprocessor instructions
+IndentPPDirectives: BeforeHash
+
+###############################################################################
+#
+# Spacing rules
+#
+
+# Minimum spaces in // comments and max. Max applies to the first // line only.
+SpacesInLineCommentPrefix:
+  Minimum:         1
+  Maximum:         1
+
+# Spaces in <>
+SpacesInAngles: Always
+
+###############################################################################
+#
+# Additional
+#
+
+# Ensure an empty line after a definition block like struct/class/enum and the following line
+SeparateDefinitionBlocks: Always
+
+# Allow empty lines at the beginning of blocks?
+KeepEmptyLinesAtTheStartOfBlocks: false
+
+# Position of * Left: auto* x, Right: auto *x, Middle: auto * x.
+PointerAlignment: Left
+
+# Provide regex to describe categories of includes.
+IncludeBlocks: Regroup
+IncludeCategories:
+  # Headers in <> without extension.
+  - Regex:           '<([A-Za-z0-9\Q/-_\E])+>'
+    Priority:        6
+  # Headers in <> from specific external libraries.
+  - Regex:           '<(catch2|boost)\/'
+    Priority:        5
+  # Headers in <> with extension.
+  - Regex:           '<([A-Za-z0-9.\Q/-_\E])+>'
+    Priority:        4
+  # Headers in <> from nx
+  - Regex:           '<(nx)\/'
+    Priority:        3
+  # Headers in "" from specific external libraries.
+  - Regex:           '"(nx)\/'
+    Priority:        2
+  # Headers in "" with extension.
+  - Regex:           '"([A-Za-z0-9.\Q/-_\E])+"'
+    Priority:        1
+
+############################
+#
+# Clang-format 16 options to watch out for
+#
+
+# IntegerLiteralSeparator
+
+# Insert Break at the end of the file if missing
+# InsertNewlineAtEOF: true
+
+# Break after attributes like [[nodiscrad]]? 
+# BreakAfterAttributes = Never
+
+# Check, especially for Microsoft based styling
+# LineEnding: LF
+
+#RequiresExpressionIndentation: OuterScope 
+...
+

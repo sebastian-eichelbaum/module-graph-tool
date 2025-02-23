@@ -1,0 +1,57 @@
+{
+    "version": 6,
+    "configurePresets": [
+        {
+            "name": "toolchain-system",
+            "description": "Use current system toolchain",
+            "generator": "Ninja",
+            "hidden": true,
+
+            "toolchainFile": ""
+        },
+        {
+            "name": "toolchain-vcpkg",
+            "generator": "Ninja",
+            "hidden": true,
+
+            "toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+        },
+        {
+            "name": "compiler-gcc",
+            "hidden": true,
+            "environment": {
+                "CXX": "g++",
+                "CC": "gcc"
+            }
+        },
+        {
+            "name": "compiler-clang",
+            "hidden": true,
+            "environment": {
+                "CXX": "clang++",
+                "CC": "clang"
+            }
+        },
+        {
+            "name": "buildtype-release",
+            "hidden": true,
+            "environment": {
+                "CMAKE_BUILD_TYPE": "release"
+            }
+        },
+        {
+            "name": "buildtype-debug",
+            "hidden": true,
+            "environment": {
+                "CMAKE_BUILD_TYPE": "debug"
+            }
+        },
+        {
+            "name": "buildtype-relwithdebinfo",
+            "hidden": true,
+            "environment": {
+                "CMAKE_BUILD_TYPE": "relwithdebinfo"
+            }
+        }
+    ]
+}

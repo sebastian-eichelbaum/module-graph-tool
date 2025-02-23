@@ -1,0 +1,92 @@
+# Latex Stuff
+*.aux
+*.log
+*.cut
+*.toc
+*.out
+
+# Some config files of the world's most favorite text editor - VIM ;-)
+lvimrc
+.lvimrc
+.ycm_extra_conf.py
+.ycm_extra_conf.pyc
+*.swp
+*.swo
+#.clang-format
+.clangd
+.cache
+
+# Generated doc
+**/doc/developer/html/*
+**/doc/developer/doxygen_sqlite3.db
+**/doc/api/html/*
+**/doc/api/doxygen_sqlite3.db
+
+# Ignore contents of the build directory
+**/build/*
+**/build-*/*
+!**/build/.dummy
+!**/build/.keep
+!**/build/README
+!**/build/README.*
+**/deploy/*
+
+# In-source build artifacts
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# Qt Creator creates these some times:
+**/CMakeLists.txt.user
+
+# Visual Studio artifacts
+.vs/
+.code/
+
+# Compile commands list
+compile_commands.json
+
+# package manager stuff
+node_modules
+vcpkg_installed
+
+# ctags
+tags
+
+# Backup files
+*.*~
+
+# Logs
+*.log
+
+# Python Pyc
+*.pyc
+__pycache__
+
+# VENV ignorieren
+**/.venv/*
+**/venv/*
+!**/venv/.keep
+!**/venv/.dummy
+!**/venv/README
+!**/venv/README.*
+
+# OpenOffice Locks
+.~lock.*
+
+# Builds
+*.dll
+*.so
+*.lib
+*.dylib
+*.o
+
+# Android specific
+**/android/obj
+**/android/libs
+*.iml
+**/.gradle
+**/local.properties
+**/.idea/workspace.xml
+**/.idea/libraries
+

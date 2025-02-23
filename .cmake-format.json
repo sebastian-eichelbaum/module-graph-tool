@@ -1,0 +1,13 @@
+{
+  "format": {
+    "disable": false,
+    "line_width": 120,
+    "tab_size": 4,
+    "use_tabchars": false,
+    "fractional_tab_policy": "use-space",
+    "line_ending": "unix",
+    "command_case": "canonical",
+    "keyword_case": "upper",
+    "dangle_parens": true
+  }
+}
