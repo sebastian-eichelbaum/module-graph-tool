@@ -28,7 +28,7 @@
         # Packages required for building
         nativeBuildInputs = with pkgs; [
           # Compilers/Toolchains
-          clang_18
+          clang_20
           gcc14
 
           # Makers
@@ -45,6 +45,7 @@
 
           # Utils
           doxygen
+          graphviz-nox
 
           # Packager to use and its dependencies:
           vcpkg
