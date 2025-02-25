@@ -2,6 +2,11 @@
 
 A tool that helps analyzing the dependency structure of module-based C++ project that uses CMake+clang/gcc.
 
+> [!IMPORTANT]
+>
+> -   This is basically a hack. It took me a few hours to put this together. It helped me to uncover some circular dependency issues in my code. It might help you too, but it will, most likely, not cover all the edge cases you might have.
+> -   This is designed to be a temporary solution. As C++ tooling gets better and better every minute, it is just a matter of time until this tool is obsolete.
+
 ## About
 
 #### The Problem
@@ -23,16 +28,9 @@ The module-graph-tool, 'mgt' for short, loads the compiler generated DDI files i
 
 Additionally, it creates a DOT file of the dependency graph that can be used to analyze dependencies graphically.
 
-#### Target Audience
+##### SCC-what?
 
--   Developers who use C++ modules in a CMake+gcc/clang setup.
-
-#### Attention
-
-> [!IMPORTANT]
->
-> -   This is basically a hack. It took me a few hours to put this together. It helped me to uncover some circular dependency issues in my code. It might help you too, but it will, most likely, not cover all the edge cases you might have.
-> -   This is designed to be a temporary solution. As C++ tooling gets better and better every minute, it is just a matter of time until this tool is obsolete.
+In graph-theory, stringly connected component (SCC) represents a subset of nodes in a graph, where each node is reach-able by each other node in that group. See [Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component),
 
 ## Requirements
 
