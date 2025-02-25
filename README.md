@@ -40,7 +40,7 @@ In graph-theory, stringly connected component (SCC) represents a subset of nodes
 -   GCC >= 14.2
 -   Cmake >= 3.3
 
-Tested on Linux - but it will probably work on Mac and Windows too. Mac users have to pay 99€ in the app-store first, I guess ;-).
+**Tested on Linux** - but it will probably work on Mac and Windows too. Mac users have to pay 99€ in the app-store first, I guess 😉.
 
 ## Build
 
@@ -104,7 +104,7 @@ The shown shortest cycle is the path you should follow. In this case, the partit
 
 ### Graph Visualization
 
-Besides the textual report, `mgt` creates a file called `graph.dot`. This contains the whole dependency graph. It can be rendered either by going to [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/?engine=dot)
+Besides the textual report, `mgt` creates a file called `graph.dot`. This contains the whole dependency graph. It can be rendered either by going to [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/?engine=dot), or by rendering it using `dot`.
 
 ```sh
 # Convert to png using dot:
@@ -136,6 +136,8 @@ It looks something like this:
 
 ❤️ [Graaf](https://github.com/bobluppes/graaf) - A lightweight graph library + some useful algorithms | ❤️ [nlohmann json](https://github.com/nlohmann/json) - JSON library
 
-## FAQ
+## Support
 
-TODO
+<a href="https://www.buymeacoffee.com/sebastian_eichelbaum" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41"></a>
+
+<a href='https://ko-fi.com/sebastian_eichelbaum' target='_blank'><img src='https://storage.ko-fi.com/cdn/kofi1.png' alt='Buy Me a Coffee at ko-fi.com' height='41' /></a>
