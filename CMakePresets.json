@@ -3,5 +3,5 @@
 
     // defaults-vcpkg: provides the most common build presets using VCPKG for dependency management
     // To get a full list, type: cmake --list-presets
-    "include": ["tools/cmake/Presets/defaults-vcpkg.json"]
+    "include": ["tools/cmake/Presets/defaults-system.json"]
 }

@@ -1,3 +1,6 @@
 [submodule "external/nlohmann_json"]
 	path = external/nlohmann_json
 	url = https://github.com/nlohmann/json
+[submodule "external/graaf"]
+	path = external/graaf
+	url = https://github.com/bobluppes/graaf.git

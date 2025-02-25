@@ -1,0 +1,78 @@
+{
+    "version": 6,
+    "include": [
+        "ConfigurePresets.json"
+    ],
+    // The most common config presets:
+    "configurePresets": [
+        {
+            "name": "x64-release-clang",
+            "displayName": "x64 release - clang, system",
+            "inherits": ["toolchain-system", "compiler-clang", "buildtype-release"],
+
+            "binaryDir": "${sourceDir}/build/x64-release-clang"
+        },
+        {
+            "name": "x64-debug-clang",
+            "displayName": "x64 debug - clang, system",
+            "inherits": ["toolchain-system", "compiler-clang", "buildtype-debug"],
+
+            "binaryDir": "${sourceDir}/build/x64-debug-clang"
+        },
+        {
+            "name": "x64-relwithdebinfo-clang",
+            "displayName": "x64 relwithdebinfo - clang, system",
+            "inherits": ["toolchain-system", "compiler-clang", "buildtype-relwithdebinfo"],
+
+            "binaryDir": "${sourceDir}/build/x64-relwithdebinfo-clang"
+        },
+        {
+            "name": "x64-release-gcc",
+            "displayName": "x64 release - gcc, system",
+            "inherits": ["toolchain-system", "compiler-gcc", "buildtype-release"],
+
+            "binaryDir": "${sourceDir}/build/x64-release-gcc"
+        },
+        {
+            "name": "x64-debug-gcc",
+            "displayName": "x64 debug - gcc, system",
+            "inherits": ["toolchain-system", "compiler-gcc", "buildtype-debug"],
+
+            "binaryDir": "${sourceDir}/build/x64-debug-gcc"
+        },
+        {
+            "name": "x64-relwithdebinfo-gcc",
+            "displayName": "x64 relwithdebinfo - gcc, system",
+            "inherits": ["toolchain-system", "compiler-gcc", "buildtype-relwithdebinfo"],
+
+            "binaryDir": "${sourceDir}/build/x64-relwithdebinfo-gcc"
+        }
+    ],
+    // The most common build presets:
+    "buildPresets": [
+       {
+            "name": "x64-release-clang",
+            "configurePreset": "x64-release-clang"
+        },
+        {
+            "name": "x64-debug-clang",
+            "configurePreset": "x64-debug-clang"
+        },
+        {
+            "name": "x64-relwithdebinfo-clang",
+            "configurePreset": "x64-relwithdebinfo-clang"
+        },
+        {
+            "name": "x64-release-gcc",
+            "configurePreset": "x64-release-gcc"
+        },
+        {
+            "name": "x64-debug-gcc",
+            "configurePreset": "x64-debug-gcc"
+        },
+        {
+            "name": "x64-relwithdebinfo-gcc",
+            "configurePreset": "x64-relwithdebinfo-gcc"
+        }
+    ]
+}
