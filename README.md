@@ -30,7 +30,7 @@ Additionally, it creates a DOT file of the dependency graph that can be used to 
 
 ##### SCC-what?
 
-In graph-theory, stringly connected component (SCC) represents a subset of nodes in a graph, where each node is reach-able by each other node in that group. See [Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component),
+In graph-theory, stringly connected component (SCC) represents a subset of nodes in a graph, where each node is reach-able by each other node in that group. See [Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component).
 
 ## Requirements
 
@@ -39,6 +39,8 @@ In graph-theory, stringly connected component (SCC) represents a subset of nodes
 -   Clang >= 18
 -   GCC >= 14.2
 -   Cmake >= 3.3
+
+Tested on Linux - but it will probably work on Mac and Windows too. Mac users have to pay 99€ in the app-store first, I guess ;-).
 
 ## Build
 
@@ -73,7 +75,6 @@ ninja
 ## Usage
 
 ```sh
-
 # Go to your build dir.
 cd zen/build/x64-release-clang
 # In there, you will have a directory called 'CMakeFiles'. Each sub-directory is a
@@ -82,6 +83,8 @@ cd zen/build/x64-release-clang
 cd CMakeFiles/zen.dir
 # Run mgt
 mgt
+# Alternatively, pass the directory to mgt:
+mgt ~/Projects/zen/build/x64-release-clang/CmakeFiles/zen.dir
 ```
 
 `mgt` will print a report. It will show you which modules a referenced but missing and where a circular dependency is:
@@ -123,11 +126,16 @@ It looks something like this:
     -   Red: Modules connected by red edges represent strongly connected components (SCCs). There is a loop!
     -   Red+Dashed: This is the shortest circular dependency in that SCC
 
+## TODO
+
+-   [ ] Do not write the DOT file without asking
+-   [ ] Allow customizing colors in the graph?
+-   [ ] Fix all the issues and edge-cases people will come up with 🤯
+
 ## Thanks
 
-❤️ [Graaf](https://github.com/bobluppes/graaf) - A lightweight graph library + some useful algorithms
-❤️ [nlohmann json](https://github.com/nlohmann/json) - JSON library
+❤️ [Graaf](https://github.com/bobluppes/graaf) - A lightweight graph library + some useful algorithms | ❤️ [nlohmann json](https://github.com/nlohmann/json) - JSON library
 
 ## FAQ
 
--   TODO
+TODO
