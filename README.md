@@ -76,8 +76,9 @@ ninja
 
 # Go to your build dir.
 cd zen/build/x64-release-clang
-# In there, you will have a directory called 'CMakeFiles'. Each sub-directory is a target of your project.
-# It is recommended to use the tool per target, not per project as there might be a lot of overlap.
+# In there, you will have a directory called 'CMakeFiles'. Each sub-directory is a
+# target of your project. It is recommended to use the tool per target, not per
+# project as there might be a lot of overlap.
 cd CMakeFiles/zen.dir
 # Run mgt
 mgt
