@@ -29,8 +29,10 @@ Additionally, it creates a DOT file of the dependency graph that can be used to 
 
 #### Attention
 
--   This is basically a hack. It took me a few hours to put this together. It helped me to uncover some circular dependency issues in my code. It might help you too, but it will, most likely, not cover all the edge cases you might have.
--   This is designed to be a temporary solution. As C++ tooling gets better and better every minute, it is just a matter of time until this tool is obsolete.
+> [!IMPORTANT]
+>
+> -   This is basically a hack. It took me a few hours to put this together. It helped me to uncover some circular dependency issues in my code. It might help you too, but it will, most likely, not cover all the edge cases you might have.
+> -   This is designed to be a temporary solution. As C++ tooling gets better and better every minute, it is just a matter of time until this tool is obsolete.
 
 ## Requirements
 
@@ -112,7 +114,15 @@ It looks something like this:
 
 #### How to read:
 
-TODO
+-   Each Node is a module/module partition.
+    -   Green-ish modules: These modules do not require anything, but are required by others.
+    -   Blue-ish modules: These modules are not required by anything, but they require others.
+    -   Orange modules: These modules where required, but their implementation could not be found.
+    -   Red-ish: These modules are not required, nor do they require anything. They are completely disconnected.
+    -   Grey: Modules that are required by others and require others.
+-   Edges between nodes represent "requirement". `A->B` means "A requires B"
+    -   Red: Modules connected by red edges represent strongly connected components (SCCs). There is a loop!
+    -   Red+Dashed: This is the shortest circular dependency in that SCC
 
 ## Thanks
 
