@@ -6,8 +6,8 @@
 int main([[maybe_unused]] int argc, [[maybe_unused]] const char** argv)
 {
     std::cout << "Module Graph Tool\n";
-    std::cout << "Sebastian Eichelbaum" << "\n";
-    std::cout << "https://github.com/sebastian-eichelbaum/module-graph-tool" << "\n\n";
+    std::cout << "Sophia Eichelbaum" << "\n";
+    std::cout << "https://github.com/seichelbaum/module-graph-tool" << "\n\n";
 
     auto location = std::filesystem::current_path();
     if (argc == 2)

@@ -47,7 +47,7 @@ In graph-theory, stringly connected component (SCC) represents a subset of nodes
 The dependencies are integrated as git submodules. When getting the code, make sure to get the submodules too:
 
 ```sh
-git clone --recursive https://github.com/sebastian-eichelbaum/module-graph-tool.git
+git clone --recursive https://github.com/seichelbaum/module-graph-tool.git
 ```
 
 ### Using clang/gcc directly:
@@ -138,6 +138,6 @@ It looks something like this:
 
 ## Support
 
-<a href="https://www.buymeacoffee.com/sebastian_eichelbaum" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41"></a>
+<a href="https://www.buymeacoffee.com/sophia_eichelbaum" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41"></a>
 
-<a href='https://ko-fi.com/sebastian_eichelbaum' target='_blank'><img src='https://storage.ko-fi.com/cdn/kofi1.png' alt='Buy Me a Coffee at ko-fi.com' height='41' /></a>
+<a href='https://ko-fi.com/sophia_eichelbaum' target='_blank'><img src='https://storage.ko-fi.com/cdn/kofi1.png' alt='Buy Me a Coffee at ko-fi.com' height='41' /></a>

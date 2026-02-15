@@ -4,9 +4,9 @@ project(
     mgt
     VERSION 1.0.0
     DESCRIPTION "Module Graph Tools"
-    HOMEPAGE_URL "https://github.com/sebastian-eichelbaum/mgt"
+    HOMEPAGE_URL "https://github.com/seichelbaum/mgt"
 )
-set(PROJECT_AUTHORS "Sebastian Eichelbaum")
+set(PROJECT_AUTHORS "Sophia Eichelbaum")
 
 # Use some sane default boilerplate. This creates some interface targets you should add as a target link lib:
 # "project_warnings", "project_options" and "project_sanitizers".
