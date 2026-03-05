@@ -229,14 +229,14 @@ namespace mgt
                      std::views::filter([](const auto& v) { return v.second.providedBy.size() > 1; }))
             {
                 // C++23: std::print and formatting ranges not yet working everywhere.
-                std::cout << std::format("W: multiple source for module \"{}\":\n   -> {}\n", moduleInfo.name,
+                std::cout << std::format("W: multiple sources for module \"{}\":\n   -> {}\n", moduleInfo.name,
                                          moduleInfo.providedBy | std::views::join_with(std::string(", ")) |
                                              std::ranges::to< std::string >());
                 numWarnings++;
             }
             std::cout << (numWarnings > 0
-                              ? ("HINT: This is likely to be caused by multiple targets sharing the same set of module "
-                                 "code. To fix these, pass one of the target specific sub-dirs of CMakeFiles.\n")
+                              ? ("HINT: This is likely to be caused by multiple targets sharing the same module "
+                                 "code. Also, be sure to import module code instead of #including it.\n")
                               : "");
 
             // Missing source for a referenced module?
